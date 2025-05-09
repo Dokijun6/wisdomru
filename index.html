@@ -17,8 +17,10 @@
             overflow: hidden;
             user-select: none;
             -webkit-user-select: none;
+            -khtml-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
+            -webkit-touch-callout: none;
         }
 
         .header {
@@ -54,6 +56,7 @@
             max-height: 100%;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             background-color: white;
+            pointer-events: none;
         }
 
         .navigation {
@@ -272,7 +275,7 @@
         let scale = 1.0;
         let canvas = document.getElementById('canvas');
         let ctx = canvas.getContext('2d');
-        let pdfUrl = './document.pdf'; // This will be your pre-loaded PDF
+        let pdfUrl = './your-document.pdf'; // This will be your pre-loaded PDF
 
         // Anti-screenshot mechanism
         function setupAntiScreenshot() {
